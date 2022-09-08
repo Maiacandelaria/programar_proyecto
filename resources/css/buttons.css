@@ -1,0 +1,23 @@
+.btn-buscar:hover{
+    @apply bg-pink-500;
+}
+
+.btn-block{
+   @apply block text-center w-full;
+}
+
+.btn-primary{
+    @apply bg-purple-600 text-white ;
+}
+
+.btn-primary:hover{
+    @apply bg-purple-900  ;
+}
+
+.btn-danger{
+    @apply bg-red-500 text-white;
+}
+
+.btn-danger:hover{
+    @apply bg-red-700;
+}
