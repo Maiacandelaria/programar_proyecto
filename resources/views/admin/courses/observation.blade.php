@@ -19,7 +19,7 @@
                     @enderror
                 </div>
                 {!! Form::submit('Rechazar curso', ['class' => 'btn btn-primary']) !!}
-            {!! Form::close() !!}
+                  {!! Form::close() !!}
         </div>
     </div>
 @stop

@@ -66,7 +66,6 @@
         <a x-show="!open" x-on:click="open = true" class="flex items-center cursor-pointer">
              <i class="far fa-plus-square text-2xl text-red-500 mr-2"></i>
                  Agregar nueva Lección
-        </a>
         <article class="card" x-show="open">
             <div class="card-body">
                  <h1 class="text-xl font-bold mb-4 cursor-pointer">Agregar nueva Lección</h1>

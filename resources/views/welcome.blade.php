@@ -1,10 +1,11 @@
 <x-app-layout>
                             {{-- PORTADA--}}
-    <section class="bg-cover" style="background-image: url({{asset('img/home/imagen_home_.jpg')}}) ">
+    <section class="bg-cover backdrop-blur-3xl" style="background-image: url({{asset('img/home/xdxdxd.jpg')}}) ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
             <div class="w-full md:w-3/4 lg:w-1/2">
                 <h1 class="text-white font-fold text-4xl">Aprende a programar junto a alumnos de tu misma escuela</h1> 
-                <p class="text-white text-lg mt-2"> <html>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur porro aspernatur libero repudiandae veniam ullam a vel laborum nostrum, iure, eius quis saepe in, eos neque maiores laboriosam animi sed Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                <p class="text-white text-lg mt-2"> <html>Transforma tu vida mediante la educación<br>
+                    Estudiantes de todo el mundo se embarcan en nuevas carreras, avanzan en sus campos y enriquecen sus vidas en nuestra plataforma
                     </html></p>
           
                 @livewire('search')
@@ -59,12 +60,13 @@
         </div>
     </section>
 
-    <section class="mt-16 bg-blue-900 py-12">
-        <h1 class="text-yellow-300 text-center text-3xl ">¿No sabes qué curso llevar?</h1>
-        <p class="text-yellow-300 text-center text-lg">Dirígete al catálogo de cursos y filtralos por categorías o niveles :)</p>
+    <section class="mt-16 bg-purple-900 py-12 hover:stroke-white rounded-lg">
+        <h1 class="text-red-50 text-center text-3xl ">¿No sabes qué curso llevar?</h1>
+        <p class="text-red-50 text-center text-lg">Dirígete al catálogo de cursos y filtralos por categorías o niveles :)</p>
             <div class="flex justify-center mt-4">
-                    <a href="{{route('courses.index')}}" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                    <a href="{{route('courses.index')}}" class="text-white bg-black hover:bg-white  font-medium  font-bold rounded-lg  transform transition duration-700 hover:scale-110 hover:text-black text-sm px-5 py-2.5 text-center  mr-2 mb-2">
                         Catálogo de cursos
+                        
                     </a>
             </div>
     </section>
@@ -82,24 +84,118 @@
 
             
     </section>
-    
-    <footer class="footer footer-center p-10 bg-primary text-primary-content">
-        <div>
-          <img src="data:image/png;base64,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">
-          <p class="font-bold ">
-            Programar. <br>Hecho por estudiantes.
-          </p> 
-          <p>Copyright © 2022</p>
-        </div> 
-        <div>
-          <div class="grid grid-flow-col gap-4">
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
-          </div>
+    <div class="bg-gray-100">
+        <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">
+          <div class="p-5 sm:w-2/12 border-r">
+              <div class="text-sm uppercase text-indigo-600 font-bold">Menu</div>
+            <ul>
+              <li class="my-2">
+                <a class="hover:text-indigo-600" href="/#">Home</a>
+              </li>
+              <li class="my-2">
+                <a class="hover:text-indigo-600" href="/#">Cursos</a>
+              </li>
+            </ul>
+           </div>
+           <div class="p-5 sm:w-7/12 border-r text-center">
+             <h3 class="font-bold text-xl text-indigo-600 mb-4">Componentity</h3>
+             <p class="text-gray-500 text-sm mb-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+           <div class="p-5 sm:w-3/12">
+              <div class="text-sm uppercase text-indigo-600 font-bold">Contact Us</div>
+            <ul>
+              <li class="my-2">
+                <a class="hover:text-indigo-600" href="/#">XXX XXXX, Floor 4 San Francisco, CA</a>
+              </li>
+              <li class="my-2">
+                <a class="hover:text-indigo-600" href="/#">contact@company.com</a>
+              </li>
+            </ul>
+           </div>
         </div>
-      </footer>
-    
-
-</x-app-layout>
+       <div class="flex py-5 m-auto text-gray-800 text-sm flex-col items-center border-t max-w-screen-xl">
+           <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+              <a href="/#" class="w-6 mx-1">
+                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                    <path id="Twitter" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
+                       5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
+                       -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
+                       0.929,-1.169c-0.408,0.242 -0.86,0.418 -1.341,0.513c-0.385,-0.411
+                       -0.934,-0.667 -1.541,-0.667c-1.167,0 -2.112,0.945 -2.112,2.111c0,0.166
+                       0.018,0.327 0.054,0.482c-1.754,-0.088 -3.31,-0.929
+                       -4.352,-2.206c-0.181,0.311 -0.286,0.674 -0.286,1.061c0,0.733 0.373,1.379
+                       0.94,1.757c-0.346,-0.01 -0.672,-0.106 -0.956,-0.264c-0.001,0.009
+                       -0.001,0.018 -0.001,0.027c0,1.023 0.728,1.877 1.694,2.07c-0.177,0.049
+                       -0.364,0.075 -0.556,0.075c-0.137,0 -0.269,-0.014 -0.397,-0.038c0.268,0.838
+                       1.048,1.449 1.972,1.466c-0.723,0.566 -1.633,0.904 -2.622,0.904c-0.171,0
+                       -0.339,-0.01 -0.504,-0.03c0.934,0.599 2.044,0.949 3.237,0.949c3.883,0
+                       6.007,-3.217 6.007,-6.008c0,-0.091 -0.002,-0.183 -0.006,-0.273c0.413,-0.298
+                       0.771,-0.67 1.054,-1.093Z"></path>
+                 </svg>
+              </a>
+              <a href="/#" class="w-6 mx-1">
+                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                    <path id="Facebook" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
+                       5.373,-12 12,-12c6.627,0 12,5.373
+                       12,12Zm-11.278,0l1.294,0l0.172,-1.617l-1.466,0l0.002,-0.808c0,-0.422
+                       0.04,-0.648 0.646,-0.648l0.809,0l0,-1.616l-1.295,0c-1.555,0 -2.103,0.784
+                       -2.103,2.102l0,0.97l-0.969,0l0,1.617l0.969,0l0,4.689l1.941,0l0,-4.689Z"></path>
+                 </svg>
+              </a>
+              <a href="/#" class="w-6 mx-1">
+                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                    <g id="Layer_1">
+                       <circle id="Oval" cx="12" cy="12" r="12"></circle>
+                       <path id="Shape" d="M19.05,8.362c0,-0.062 0,-0.125 -0.063,-0.187l0,-0.063c-0.187,-0.562
+                          -0.687,-0.937 -1.312,-0.937l0.125,0c0,0 -2.438,-0.375 -5.75,-0.375c-3.25,0
+                          -5.75,0.375 -5.75,0.375l0.125,0c-0.625,0 -1.125,0.375
+                          -1.313,0.937l0,0.063c0,0.062 0,0.125 -0.062,0.187c-0.063,0.625 -0.25,1.938
+                          -0.25,3.438c0,1.5 0.187,2.812 0.25,3.437c0,0.063 0,0.125
+                          0.062,0.188l0,0.062c0.188,0.563 0.688,0.938 1.313,0.938l-0.125,0c0,0
+                          2.437,0.375 5.75,0.375c3.25,0 5.75,-0.375 5.75,-0.375l-0.125,0c0.625,0
+                          1.125,-0.375 1.312,-0.938l0,-0.062c0,-0.063 0,-0.125
+                          0.063,-0.188c0.062,-0.625 0.25,-1.937 0.25,-3.437c0,-1.5 -0.125,-2.813
+                          -0.25,-3.438Zm-4.634,3.927l-3.201,2.315c-0.068,0.068 -0.137,0.068
+                          -0.205,0.068c-0.068,0 -0.136,0 -0.204,-0.068c-0.136,-0.068 -0.204,-0.204
+                          -0.204,-0.34l0,-4.631c0,-0.136 0.068,-0.273 0.204,-0.341c0.136,-0.068
+                          0.272,-0.068 0.409,0l3.201,2.316c0.068,0.068 0.136,0.204
+                          0.136,0.34c0.068,0.136 0,0.273 -0.136,0.341Z" style="fill: rgb(255, 255, 255);"></path>
+                    </g>
+                 </svg>
+              </a>
+              <a href="/#" class="w-6 mx-1">
+                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                    <path id="Shape" d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
+                       3.8,2.6c1,1.1 1.9,2.3 2.6,3.8c0.7,1.5 0.9,3 0.9,4.7c0,1.7 -0.3,3.2
+                       -0.9,4.7c-0.6,1.5 -1.5,2.8 -2.6,3.8c-1.1,1 -2.3,1.9 -3.8,2.6c-1.5,0.7
+                       -3.1,0.9 -4.7,0.9c-1.6,0 -3.2,-0.3 -4.7,-0.9c-1.5,-0.6 -2.8,-1.5
+                       -3.8,-2.6c-1,-1.1 -1.9,-2.3 -2.6,-3.8c-0.7,-1.5 -0.9,-3.1 -0.9,-4.7c0,-1.6
+                       0.3,-3.2 0.9,-4.7c0.6,-1.5 1.5,-2.8 2.6,-3.8c1.1,-1 2.3,-1.9
+                       3.8,-2.6Zm-0.3,7.1c0.6,0 1.1,-0.2 1.5,-0.5c0.4,-0.3 0.5,-0.8 0.5,-1.3c0,-0.5
+                       -0.2,-0.9 -0.6,-1.2c-0.4,-0.3 -0.8,-0.5 -1.4,-0.5c-0.6,0 -1.1,0.2
+                       -1.4,0.5c-0.3,0.3 -0.6,0.7 -0.6,1.2c0,0.5 0.2,0.9 0.5,1.3c0.3,0.4 0.9,0.5
+                       1.5,0.5Zm1.5,10l0,-8.5l-3,0l0,8.5l3,0Zm11,0l0,-4.5c0,-1.4 -0.3,-2.5
+                       -0.9,-3.3c-0.6,-0.8 -1.5,-1.2 -2.6,-1.2c-0.6,0 -1.1,0.2 -1.5,0.5c-0.4,0.3
+                       -0.8,0.8 -0.9,1.3l-0.1,-1.3l-3,0l0.1,2l0,6.5l3,0l0,-4.5c0,-0.6 0.1,-1.1
+                       0.4,-1.5c0.3,-0.4 0.6,-0.5 1.1,-0.5c0.5,0 0.9,0.2 1.1,0.5c0.2,0.3 0.4,0.8
+                       0.4,1.5l0,4.5l2.9,0Z"></path>
+                 </svg>
+              </a>
+              <a href="/#" class="w-6 mx-1">
+                 <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
+                    <path id="Combined-Shape" d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
+                       -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
+                       -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323
+                       0.681,0.323l0.722,0l0,1.426l-4.675,0l0,-1.426l0.935,0l0,-6.655l-0.163,0l-2.251,8.081l-1.742,0l-2.222,-8.081l-0.168,0l0,6.655l0.935,0l0,1.426l-3.74,0l0,-1.426l0.519,0c0.203,0
+                       0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385
+                       -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z"></path>
+                 </svg>
+              </a>
+           </div>
+           <div class="my-5">© Copyright 2020. All Rights Reserved.</div>
+        </div>
+     </div>
+     
+     
+  </x-app-layout>
 

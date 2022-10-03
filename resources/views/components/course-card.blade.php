@@ -17,13 +17,13 @@
 
                 <div class="flex">
                     <ul class="flex text-sm ">
-                        <li class="mr-1">
+                        <li class="mr-2">
                             <i class="fas fa-star text-{{$course->rating >= 1 ? 'yellow' : 'gray'}}-400"></i>
                         </li>
-                        <li class="mr-1">
+                        <li class="mr-2">
                             <i class="fas fa-star text-{{$course->rating >= 2 ? 'yellow' : 'gray'}}-400"></i>
                         </li>
-                        <li class="mr-1">
+                        <li class="mr-2">
                             <i class="fas fa-star text-{{$course->rating >= 3 ? 'yellow' : 'gray'}}-400"></i>
                         </li>
                         <li class="mr-1">
@@ -40,7 +40,7 @@
                         </p>
                 </div>
 
-                <a href="{{route('courses.show', $course)}}" class=" mt-4 text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 btn-block ">
+                <a href="{{route('courses.show', $course)}}" class=" mt-4  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 btn-block transform transition duration-700 hover:scale-110 hover:text-white text-sm px-5 py-2.5 text-center  mr-2 mb-2">
                     Más información
                 </a>
         </div>

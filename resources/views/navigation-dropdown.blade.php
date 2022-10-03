@@ -84,6 +84,7 @@
                                 </x-jet-dropdown-link>
                             @endcan
                             <x-jet-dropdown-link href="{{ route('admin.home') }}">
+                                
                                 Administrador
                              </x-jet-dropdown-link>
 
@@ -139,8 +140,9 @@
                         </x-slot>
                     </x-jet-dropdown>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Iniciar Sesión</a>
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrarse</a>
+                    <a href="{{ route('login') }}" class="text-sm bg-clip-text text-black transform 
+                    hover:scale-110 hover:text-transparent bg-gradient-to-r from-indigo-800 via-purple-500 to-pink-500 ">Iniciar Sesión</a>
+                    <a href="{{ route('register') }}" class="ml-4 text-sm bg-clip-text text-black transform hover:scale-110 hover:text-transparent bg-gradient-to-r from-indigo-800 via-purple-500 to-pink-500">Registrarse</a>
                 @endauth
             </div>
 
@@ -256,11 +258,11 @@
 
             <div class="py-1 border-t border-gray-200">
                 <x-jet-responsive-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
-                    Login
+                    Iniciar sesion
                 </x-jet-responsive-nav-link>
 
                 <x-jet-responsive-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
-                    Register
+                    Registrarse
                 </x-jet-responsive-nav-link>
             </div>
 

@@ -11,8 +11,6 @@ class Observation extends Model
     use HasFactory;
     
     protected $filable = ['body', 'course_id'];
-
-    //Relacion Course  Observation UNO A UNO INVERSA
     public function course(){
          return $this->belongsTo('App\Models\Course');
     }

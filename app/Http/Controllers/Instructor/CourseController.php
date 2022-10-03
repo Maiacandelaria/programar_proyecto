@@ -53,7 +53,7 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|unique:courses',
             'subtitle' => 'required',
             //'slug' => 'required',  // 
             'slug' => 'required|unique:courses',
