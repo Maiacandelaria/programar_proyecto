@@ -14,6 +14,7 @@
     <div class="card-body flex-1 flex flex-col">
             <h1 class="card-title">{{Str::limit($course->title, 40)}}  </h1>
             <p class="text-gray-700 text-center text-sm mb-2 mt-auto">Prof:{{$course->teacher->name}}</p>
+            
 
                 <div class="flex">
                     <ul class="flex text-sm ">
@@ -40,7 +41,16 @@
                         </p>
                 </div>
 
-                <a href="{{route('courses.show', $course)}}" class=" mt-4  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 btn-block transform transition duration-700 hover:scale-110 hover:text-white text-sm px-5 py-2.5 text-center  mr-2 mb-2">
+               <div>
+                @if ($course->price->value == 0)
+
+               <p class="my-2 text-green-800">Gratis :) </p>
+                @else
+                    <p class="my-2 text-gray-500">$ {{$course->price->value}}</p>
+              @endif
+               </div>  
+
+                <a href="{{route('courses.show', $course)}}" class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 btn-block transform transition duration-700 hover:scale-110 hover:text-white text-sm px-5 py-2.5 text-center  mr-2 mb-2">
                     Más información
                 </a>
         </div>

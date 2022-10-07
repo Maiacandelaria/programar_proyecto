@@ -83,10 +83,12 @@
                                 Instructor
                                 </x-jet-dropdown-link>
                             @endcan
+                            
+                            @can('Ver dashboard', 'Leer cursos')
                             <x-jet-dropdown-link href="{{ route('admin.home') }}">
-                                
                                 Administrador
-                             </x-jet-dropdown-link>
+                            </x-jet-dropdown-link>
+                        @endcan
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -199,7 +201,7 @@
                     </x-jet-responsive-nav-link>
                 @endcan
 
-                @can('Ver dashboard')
+                @can('Ver dashboard', 'Leer cursos')
                     <x-jet-responsive-nav-link href="{{ route('admin.home') }}" :active="request()->routeIs('instructor.courses.index')">
                         Administrador
                     </x-jet-responsive-nav-link>
@@ -219,7 +221,7 @@
                         <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                     this.closest('form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('Cerrar Sesion') }}
                         </x-jet-responsive-nav-link>
                     </form>
 

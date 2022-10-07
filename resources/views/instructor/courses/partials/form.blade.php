@@ -40,6 +40,11 @@
         {!! Form::label('level_id', 'Niveles:') !!}
         {!! Form::select('level_id', $levels, null, ['class'=> 'form-input block w-full mt-1']) !!}
     </div>
+    
+    <div>
+        {!! Form::label('price_id', 'Precios:') !!}
+        {!! Form::select('price_id', $prices, null, ['class'=> 'form-input block w-full mt-1']) !!}
+    </div>
 </div>
 
 <h1 class="text-2xl font-bold mt-8 mb-2">Imagen del curso</h1>

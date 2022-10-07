@@ -83,6 +83,13 @@ class Course extends Model
         return $this->belongsTo('App\Models\Level');
     }
 
+    
+
+    public function price(){
+        return $this->belongsTo('App\Models\price'); //level
+    }
+
+    
     public function category(){
         return $this->belongsTo('App\Models\Category');
     }
