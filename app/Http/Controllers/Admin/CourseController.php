@@ -58,7 +58,9 @@ class CourseController extends Controller
         //Enviar correo electronico
         
         $mail = new RejectCourse($course);
+        
         Mail::to($course->teacher->email)->queue($mail);   
+
         return redirect()->route('admin.courses.index')->with('info', 'El curso se ha rechazado con éxito');
     }
 

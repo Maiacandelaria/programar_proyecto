@@ -24,7 +24,7 @@ $payer->setPaymentMethod('paypal');
 
 $amount = new \PayPal\Api\Amount();
 $amount->setTotal($course->price->value);
-$amount->setCurrency('USDGIT');
+$amount->setCurrency('USD');
 
 $transaction = new \PayPal\Api\Transaction();
 $transaction->setAmount($amount);

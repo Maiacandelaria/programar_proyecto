@@ -10,7 +10,9 @@ class Observation extends Model
 {
     use HasFactory;
     
-    protected $filable = ['body', 'course_id'];
+    protected $fillable = ['body', 'course_id'];
+
+
     public function course(){
          return $this->belongsTo('App\Models\Course');
     }
