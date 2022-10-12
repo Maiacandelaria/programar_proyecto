@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Programar Proyecto') }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -20,27 +20,32 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-700">
             @livewire('navigation-dropdown')
 
             <!-- Page Content -->
-            <div class="container py-8 grid grid-cols-5 gap-6">
+            <div class="container py-8 grid grid-cols-5 gap-6 text-white">
                 <aside>
-                    <h1 class="font-bold text-lg mb-4">Edición del curso</h1>
+                    <h1 class="font-bold text-lg mb-4 ">Edición del curso</h1>
         
                     <ul class="text-sm text-gray-600 mb-4">
-                        <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit', $course) border-indigo-400 @else border-transparent  @endif pl-2">
+                        <li class="leading-7 mb-1 border-l-4 hover:bg-purple-600 text-white @routeIs('instructor.courses.edit', $course) border-indigo-400 @else border-transparent  @endif pl-2">
                             <a href="{{route('instructor.courses.edit', $course)}}">Información del curso</a>
                         </li>
-                        <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.curriculum', $course) border-indigo-400 @else border-transparent  @endif pl-2">
+                        <li class="leading-7 mb-1 border-l-4 hover:bg-purple-600 text-white @routeIs('instructor.courses.curriculum', $course) border-indigo-400 @else border-transparent  @endif pl-2">
                             <a href="{{route('instructor.courses.curriculum', $course)}}">Lecciones del curso</a>
                         </li>
-                        <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.goals', $course) border-indigo-400 @else border-transparent  @endif pl-2">
+                        <li class="leading-7 mb-1 border-l-4 hover:bg-purple-600 text-white @routeIs('instructor.courses.goals', $course) border-indigo-400 @else border-transparent  @endif pl-2">
                             <a href="{{route('instructor.courses.goals', $course)}}">Metas del curso</a>
                         </li>
-                        <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.students', $course) border-indigo-400 @else border-transparent  @endif pl-2">
+                        <li class="leading-7 mb-1 border-l-4 hover:bg-purple-600 text-white @routeIs('instructor.courses.students', $course) border-indigo-400 @else border-transparent  @endif pl-2">
                             <a href="{{route('instructor.courses.students', $course)}}">Estudiantes</a>
                         </li>
+                        @if ($course->observation)
+                        <li class="leading-7 mb-1 border-l-4 hover:bg-purple-600 text-white @routeIs('instructor.courses.students', $course) border-indigo-400 @else border-transparent  @endif pl-2">
+                            <a href="{{route('instructor.courses.students', $course)}}">Observaciones del cursp</a>
+                        </li>
+                        @endif
                     </ul>
 
                     @switch($course->status)
@@ -48,7 +53,7 @@
                         @case(1)
                             <form action="{{route('instructor.courses.status', $course)}}" method="POST">
                                 @csrf
-                                <button class="btn btn-danger" type="submit">Solicitar revisión</button>
+                                <button class="btn bg-red-800 hover:bg-red-900" type="submit">Solicitar revisión</button>
                             </form>
                             @break
                     

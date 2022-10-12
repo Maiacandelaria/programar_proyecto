@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'ETCML')
+@section('title', 'Programar Proyecto')
 
 @section('content_header')
     <h1>Crear precios</h1>

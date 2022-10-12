@@ -1,6 +1,6 @@
 <x-app-layout>
                             {{-- PORTADA--}}
-    <section class="bg-cover backdrop-blur-3xl" style="background-image: url({{asset('img/home/xdxdxd.jpg')}}) ">
+    <section class="bg-cover backdrop-blur-3xl" style="background-image: url({{asset('img/home/pexels-lukas-mayer-785429.jpg')}}) ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
             <div class="w-full md:w-3/4 lg:w-1/2">
                 <h1 class="text-white font-fold text-4xl">Aprende a programar junto a alumnos de tu misma escuela</h1> 
@@ -84,32 +84,40 @@
 
             
     </section>
-    <div class="bg-gray-100">
+    <div class="bg-black">
         <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">
           <div class="p-5 sm:w-2/12 border-r">
               <div class="text-sm uppercase text-indigo-600 font-bold">Menu</div>
             <ul>
               <li class="my-2">
-                <a class="hover:text-indigo-600" href="/#">Home</a>
+                <a class="text-white hover:text-indigo-600" href="#">Home</a>
               </li>
               <li class="my-2">
-                <a class="hover:text-indigo-600" href="/#">Cursos</a>
+                <a class="text-white hover:text-indigo-600" href="#">Cursos</a>
               </li>
             </ul>
            </div>
            <div class="p-5 sm:w-7/12 border-r text-center">
-             <h3 class="font-bold text-xl text-indigo-600 mb-4">Componentity</h3>
-             <p class="text-gray-500 text-sm mb-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+             <h3 class="font-bold text-xl text-indigo-600 mb-4">Programar Proyecto</h3>
+             <p class="text-white text-sm mb-10">Proyecto final hecho por alumnos de la escuela tecnica Carmen Molina de Llano
+                <br>
+                Disponible en github:
+             </p>
+             <li class="my-2">
+                <a class="text-white  hover:text-indigo-600" href="https://github.com/Maiacandelaria/programar_proyecto"> https://github.com/Maiacandelaria/programar_proyecto</a>
+              </li>
             </div>
            <div class="p-5 sm:w-3/12">
-              <div class="text-sm uppercase text-indigo-600 font-bold">Contact Us</div>
+              <div class="text-sm uppercase text-indigo-600 font-bold">Contanos</div>
             <ul>
-              <li class="my-2">
-                <a class="hover:text-indigo-600" href="/#">XXX XXXX, Floor 4 San Francisco, CA</a>
-              </li>
-              <li class="my-2">
-                <a class="hover:text-indigo-600" href="/#">contact@company.com</a>
-              </li>
+                <a class=" text-white hover:text-indigo-200" href="mailto:maiafigueredo0525@gmail.com?subject=Contactar&body=Que%20buena%20pagina!">maiafigueredo0525@gmail.com</a>
+            </li>
+            <li class="my-2">
+              <a class="text-white hover:text-indigo-200" href="mailto:ga3rielleyes@gmail.com?subject=Contactar&body=Que%20buena%20pagina!">ga3rielleyes@gmail.com</a>
+            </li>
+            <li class="my-2">
+              <a class="text-white hover:text-indigo-200" href="mailto:gleilaflores4to2da@gmail.com?subject=Contactar&body=Que%20buena%20pagina!">gleilaflores4to2da@gmail.com</a>
+            </li>
             </ul>
            </div>
         </div>

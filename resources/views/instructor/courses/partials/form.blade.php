@@ -52,7 +52,7 @@
 <div class="grid grid-cols-2 gap-4">
         <figure>
            @isset($course->image)
-                <img id="picture" class="w-full h-64 object-cover object-center" src="{{($course->image->url)}}" alt="">
+                <img id="picture" class="w-full h-64 object-cover object-center" src="{{(Storage::$course->image->url)}}" alt="">
            @else
                 <img id="picture" class="w-full h-64 object-cover object-center" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
            @endisset
@@ -60,7 +60,23 @@
         <div>
            <p class="mb-2" >Agrega una imagen para tu curso</p>
             {!! Form::file('file', ['class'=> 'form-input w-full' . ($errors->has('file') ? ' border-red-600' : '' ) , 'id' =>'file', 'accept' => 'image/*']) !!}
-        
+
+            <script>
+                    document.getElementById("file").addEventListener('change', cambiarImagen);
+
+                    function cambiarImagen(event){
+                        var file = event.target.files[0];
+
+                        var reader = new FileReader();
+                        reader.onload = (event) => {
+                            document.getElementById("picture").setAttribute('src', event.target.result); 
+                        };
+
+                        reader.readAsDataURL(file);
+                    }   
+            </script>
+            
+
             @error('file')
                  <strong class="text-sm text-red-600">{{$message}}</strong>
             @enderror

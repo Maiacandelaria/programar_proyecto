@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif !important;
-}
+    font-family: 'Poppins', sans-serif !important;
+    }
 
 
 
@@ -23,7 +23,7 @@ body {
 }
 
 .btn-danger{
-    @apply bg-red-500 text-white;
+    @apply bg-red-700 text-white;
 }
 
 .btn-danger:hover{

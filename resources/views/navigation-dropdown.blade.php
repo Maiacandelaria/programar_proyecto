@@ -16,7 +16,7 @@
 @endphp
 
 
-<nav x-data="{ open: false }" class="bg-gray-200 border-b border-white-100 shadow">
+<nav x-data="{ open: false }" class="bg-indigo-900 border-b border-black-100 shadow">
 
     <!-- Primary Navigation Menu -->
     <div class="container">
@@ -51,7 +51,7 @@
                         <x-slot name="trigger">
 
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out text-indigo-900">
                                     <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
@@ -141,10 +141,12 @@
                             </form>
                         </x-slot>
                     </x-jet-dropdown>
+
                 @else
-                    <a href="{{ route('login') }}" class="text-sm bg-clip-text text-black transform 
-                    hover:scale-110 hover:text-transparent bg-gradient-to-r from-indigo-800 via-purple-500 to-pink-500 ">Iniciar Sesión</a>
-                    <a href="{{ route('register') }}" class="ml-4 text-sm bg-clip-text text-black transform hover:scale-110 hover:text-transparent bg-gradient-to-r from-indigo-800 via-purple-500 to-pink-500">Registrarse</a>
+                    <a href="{{ route('login') }}" class="text-sm bg-clip-text text-gray-300 transform 
+                    hover:scale-110 hover:text-gray-400">Iniciar Sesión</a>
+                    <a href="{{ route('register') }}" class="ml-4 text-sm text-sm bg-clip-text text-gray-300 transform 
+                    hover:scale-110 hover:text-gray-4000">Registrarse</a>
                 @endauth
             </div>
 

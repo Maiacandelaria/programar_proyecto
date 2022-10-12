@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'ETCMLL')
+@section('title', 'Programar Proyecto')
 
 @section('content_header')
     <h1>Editar categoría</h1>

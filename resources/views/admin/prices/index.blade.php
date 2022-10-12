@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'ETCML')
+@section('title', 'Programar Proyecto')
 
 @section('content_header')
 <a class="btn btn-secondary float-right" href="{{route('admin.prices.create')}}">Crear precio</a>

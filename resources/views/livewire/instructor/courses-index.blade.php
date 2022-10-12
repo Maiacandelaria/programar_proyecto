@@ -7,7 +7,7 @@
 
                 @if ($courses->count())
                 <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
+                    <thead class="bg-gray-900">
                     <tr>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         NOMBRE
@@ -27,23 +27,23 @@
                     </tr>
                     </thead>
                   
-                    <tbody class="bg-white divide-y divide-gray-200">
+                    <tbody class="bg-gray-900 divide-y divide-gray-200">
                         @foreach ($courses as $course)
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-10 w-10">
-                                        @isset($course->image)
-                                           <img class="h-10 w-10 rounded-full object-cover object-center" src="{{($course->image->url)}}">
+                                        @isset($course->image})
+                                           <img class="h-10 w-10 rounded-full object-cover object-center" src="{{(Storage::url($course->image->url))}}">
                                         @else 
                                           <img class="h-10 w-10 rounded-full object-cover object-center" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
                                         @endisset
                                     </div>
                                     <div class="ml-4">
-                                    <div class="text-sm font-medium text-gray-900">
+                                    <div class="text-sm font-medium text-white">
                                         {{$course->title}}
                                     </div>
-                                    <div class="text-sm text-gray-500">
+                                    <div class="text-sm text-white">
                                         {{$course->category->name}}
                                     </div>
                                     </div>
@@ -106,7 +106,7 @@
 
                                    
                                 </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <td class="px-6 py-4  text-right text-sm font-medium">
                                     <a href="{{route('instructor.courses.edit', $course)}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                 </td>
                             </tr>

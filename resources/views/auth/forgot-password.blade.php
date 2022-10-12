@@ -30,7 +30,15 @@
                 <x-jet-button>
                     {{ __('Enviar mail de reestablecimiento de contraseña') }}
                 </x-jet-button>
+
+                <x-jet-button>
+                    <a class="m-2" href="{{ route('login') }}">
+                        {{ __('Volver e iniciar sesion') }}
+                    </a>
+                </x-jet-button>
             </div>
+            
+           
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>

@@ -169,4 +169,8 @@ class CourseController extends Controller
 
         return back();
     }
+
+    public function observation(Course $course){
+        return view('instructor.courses.observation');
+    }
 }
