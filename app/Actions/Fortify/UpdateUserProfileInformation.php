@@ -9,13 +9,7 @@ use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
 
 class UpdateUserProfileInformation implements UpdatesUserProfileInformation
 {
-    /**
-     * Validate and update the given user's Informacion del perfil.
-     *
-     * @param  mixed  $user
-     * @param  array  $input
-     * @return void
-     */
+    
     public function update($user, array $input)
     {
         Validator::make($input, [

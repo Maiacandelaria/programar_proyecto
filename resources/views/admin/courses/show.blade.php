@@ -38,18 +38,18 @@
 
         @endif
 
-        <div class="order-2 lg:col-span-2 lg:order-1">
+        <div class="order-2 lg:col-span-2 lg:order-1 bg-black">
             {{-- METAS --}}
-            <section class="card mb-12">
-                <div class="card-body">
-                    <h1 class="font-bold text-2xl mb-2">Lo que aprenderás</h1>
+            <section class="card mb-12 bg-black">
+                <div class="card-body bg-black">
+                    <h1 class="font-bold text-2xl mb-2 bg-black">Lo que aprenderás</h1>
 
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 bg-black">
 
                         @forelse ($course->goals as $goal)
-                            <li class="text-gray-700 text-base"><i class="fas fa-play-circle mr-2 text-gray-600"></i> {{$goal->name}}</li>
+                            <li class="text-white text-base"><i class="fas fa-play-circle mr-2 text-white"></i> {{$goal->name}}</li>
                         @empty
-                            <li class="text-gray-700 text-base">Este curso no tiene asignado ninguna meta</li>
+                            <li class="text-white text-base">Este curso no tiene asignado ninguna meta</li>
                         @endforelse
                     </ul>
                 </div>
@@ -57,8 +57,8 @@
 
             {{-- TEMARIO --}}
 
-            <section class="mb-12">
-               <h1 class="font-fold text-3xl mb-2">Temario</h1>
+            <section class="mb-12 bg-black" >
+               <h1 class="font-fold text-3xl mb-2 bg-black">Temario</h1>
                @forelse ($course->sections as $section)
                    <article class="mb-4 shadow"
                            @if ($loop->first)
@@ -67,13 +67,13 @@
                                x-data="{open: false}"
                            @endif
                            >
-                        <header class="border border-gray-200 px-4 py-2 cursor-pointer bg-gray-200" x-on:click="open = !open">
-                            <h1 class="font-bold text-lg text-gray-600">{{$section->name}}</h1>
+                        <header class="border border-gray-200 px-4 py-2 cursor-pointer bg-black" x-on:click="open = !open">
+                            <h1 class="font-bold text-lg text-white">{{$section->name}}</h1>
                         </header>
-                        <div class="bg-white py-2 px-4" x-show="open">
+                        <div class="bg-black py-2 px-4" x-show="open">
                             <ul class="grid grid-cols-1 gap-2">
                                 @foreach ($section->lessons as $lesson)
-                                    <li class="text-gray-700 text-base"><i class="fas fa-play-circle mr-2 text-gray-600"></i> {{$lesson->name}}</li>
+                                    <li class="text-white text-base"><i class="fas fa-play-circle mr-2 text-white"></i> {{$lesson->name}}</li>
                                 @endforeach
                             </ul>
                         </div>
@@ -91,11 +91,11 @@
             {{-- REQUISITOS --}}
             <section class="mb-8">
                 <h1 class="font-bold text-3xl">Requisitos</h1>
-                <ul class="list-disc list-inside">
+                <ul class="list-disc list-inside text-white">
                     @forelse ($course->requirements as $requirement)
-                        <li class="text-gray-700 text-base">{{$requirement->name}}</li>
+                        <li class="text-white text-base">{{$requirement->name}}</li>
                     @empty
-                        <li class="text-gray-700 text-base">Este curso no tiene ningún requerimiento</li>
+                        <li class="text-white text-base">Este curso no tiene ningún requerimiento</li>
                     @endforelse
                 </ul>
             </section>

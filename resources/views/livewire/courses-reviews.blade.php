@@ -1,9 +1,9 @@
 <section class="mt-4">
-    <h1 class="font-bold text-3xl text-gray-800 mb-2">Valoración</h1>
+    <h1 class="font-bold text-3xl text-white mb-2 bg-black">Valoración</h1>
 
     @can('enrolled', $course)
         <article>
-            <textarea wire:model="comment" class="form-input w-full" rows="3" placeholder="Ingrese una reseña del curso"></textarea>
+            <textarea wire:model="comment" class="form-input w-full text-white" rows="3" placeholder="Ingrese una reseña del curso"></textarea>
 
                 <div class="flex items-center">
                     <button class="btn btn-primary mr-2" wire:click="store">Guardar</button>
@@ -30,17 +30,17 @@
         </article>
     @endcan
 
-    <div class="card">
-        <div class="card-body">
-            <p class="text-gray-800 text-xl">{{$course->reviews->count()}} Valoraciones</p>
+    <div class=" bg-black">
+        <div class="card-body bg-black">
+            <p class="text-white text-xl">{{$course->reviews->count()}} Valoraciones</p>
             @foreach ($course->reviews as $review)
-                <article class="flex mb-4 text-gray-800">
+                <article class="flex mb-4 text-white">
                     <figure class="mr-4">
                         <img class="h-12 w-12 object-cover rounded-full shadow-xs" src="{{$review->user->profile_photo_url}}" alt="">
                     </figure>
                     
-                    <div class="card flex-1">
-                        <div class="card-body bg-gray-100">
+                    <div class=" flex-1">
+                        <div class="card-body bg-black">
                             <p><b>{{$review->user->name}}</b><i class="fas fa-star text-yellow-300"></i>({{$review->rating}})</p>
 
                             {{$review->comment}}

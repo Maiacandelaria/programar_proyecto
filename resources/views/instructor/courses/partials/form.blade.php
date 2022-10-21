@@ -49,32 +49,21 @@
 
 <h1 class="text-2xl font-bold mt-8 mb-2">Imagen del curso</h1>
 
+
 <div class="grid grid-cols-2 gap-4">
+
         <figure>
-           @isset($course->image)
-                <img id="picture" class="w-full h-64 object-cover object-center" src="{{(Storage::$course->image->url)}}" alt="">
-           @else
-                <img id="picture" class="w-full h-64 object-cover object-center" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
-           @endisset
+            @isset($course->image)
+            <img id="file" class="h-36 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt="">
+       @else
+            <img id="file" class="h-36 w-full object-cover" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+       @endisset
         </figure>
+
         <div>
            <p class="mb-2" >Agrega una imagen para tu curso</p>
             {!! Form::file('file', ['class'=> 'form-input w-full' . ($errors->has('file') ? ' border-red-600' : '' ) , 'id' =>'file', 'accept' => 'image/*']) !!}
 
-            <script>
-                    document.getElementById("file").addEventListener('change', cambiarImagen);
-
-                    function cambiarImagen(event){
-                        var file = event.target.files[0];
-
-                        var reader = new FileReader();
-                        reader.onload = (event) => {
-                            document.getElementById("picture").setAttribute('src', event.target.result); 
-                        };
-
-                        reader.readAsDataURL(file);
-                    }   
-            </script>
             
 
             @error('file')

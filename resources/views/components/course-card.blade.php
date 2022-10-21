@@ -5,7 +5,7 @@
 
     <img class="card flex flex-col">
         @isset($course->image)
-             <img id="picture" class="h-36 w-full object-cover" src="{{($course->image->url)}}" alt="">
+             <img id="picture" class="h-36 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt="">
         @else
              <img id="picture" class="h-36 w-full object-cover" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
         @endisset

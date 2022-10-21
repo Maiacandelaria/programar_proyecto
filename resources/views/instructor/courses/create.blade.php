@@ -9,6 +9,7 @@
                     {!! Form::hidden('user_id', auth()->user()->id) !!}
 
                      @include('instructor.courses.partials.form')
+
                      <div class="flex justify-end">
                         {!! Form::submit('Crear un nuevo curso', ['class'=> 'btn btn-primary cursor-pointer']) !!}
                      </div>
@@ -16,6 +17,7 @@
             </div>
         </div>
     </div>
+    
     <x-slot name="js">
         <script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
         <script src="{{asset('js/instructor/courses/form.js')}}"></script>

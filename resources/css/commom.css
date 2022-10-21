@@ -3,7 +3,7 @@
 }
 
 .card{
-    @apply bg-white shadow-lg rounded-lg overflow-hidden;
+    @apply  shadow-lg rounded-lg overflow-hidden;
 }
 
 .card-body{
@@ -11,7 +11,7 @@
 }
 
 .card-title{
-    @apply text-gray-700 text-center text-xl mb-2 leading-6;
+    @apply text-white text-center text-xl mb-2 leading-6;
 }
 
 .embed-responsive{

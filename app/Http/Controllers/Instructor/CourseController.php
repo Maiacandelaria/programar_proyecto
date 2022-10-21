@@ -114,7 +114,6 @@ class CourseController extends Controller
      */
     public function update(Request $request, Course $course)
     {
-        $this->authorize('dicatated', $course);
 
         $request->validate([
             'title' => 'required',
@@ -124,12 +123,13 @@ class CourseController extends Controller
             'category_id' => 'required',
             'level_id' => 'required',
             'prices_id' => 'required',
-            'file' => 'image'
+            'file' => 'image',
         ]);
         
         $course->update($request->all());
 
         if ($request->file('file')) {
+            
             $url = Storage::put('courses', $request->file('file'));
 
             if ($course->image) {

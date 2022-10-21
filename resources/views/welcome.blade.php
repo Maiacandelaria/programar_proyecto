@@ -1,3 +1,4 @@
+
 <x-app-layout>
                             {{-- PORTADA--}}
     <section class="bg-cover backdrop-blur-3xl" style="background-image: url({{asset('img/home/pexels-lukas-mayer-785429.jpg')}}) ">
@@ -81,8 +82,8 @@
                     @endforeach
 
                 </div>
-
-            
+</section>
+                 
     </section>
     <div class="bg-black">
         <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">
