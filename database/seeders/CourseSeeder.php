@@ -25,7 +25,7 @@ class CourseSeeder extends Seeder
         $courses = Course::factory(12)->create();
 
         foreach ($courses as $course) {
-            Review::factory(5)->create([
+            Review::factory(10)->create([
                 'course_id' => $course->id
             ]);
 

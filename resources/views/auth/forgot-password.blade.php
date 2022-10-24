@@ -4,7 +4,7 @@
             <x-jet-authentication-card-logo />
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
+        <div class="mb-4 text-sm text-gray-400">
             {{ __('¿Olvidaste tu contraseña? No hay problema. Simplemente háganos saber su dirección de correo electrónico y le enviaremos un enlace de restablecimiento de contraseña que le permitirá elegir una nueva.') }}
         </div>
 
@@ -32,8 +32,8 @@
                 </x-jet-button>
 
                 <x-jet-button>
-                    <a class="m-2" href="{{ route('login') }}">
-                        {{ __('Volver e iniciar sesion') }}
+                    <a class="m-1 text-small" href="{{ route('login') }}">
+                        {{ __('Volver') }}
                     </a>
                 </x-jet-button>
             </div>

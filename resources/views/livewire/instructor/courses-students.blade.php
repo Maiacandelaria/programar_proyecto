@@ -11,14 +11,14 @@
         <thead class="bg-gray-50">
         <tr>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-            NOMBRE
+            Nombre
             </th>
             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
             E-mail
             </th>
            
             <th scope="col" class="relative px-6 py-3">
-            <span class="sr-only">Edit</span>
+            <span class="sr-only">Editar</span>
             </th>
         </tr>
         </thead>

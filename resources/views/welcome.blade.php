@@ -74,8 +74,8 @@
 
     <section class="my-24">
             
-                <h1 class="text-gray-700 text-center text-3xl">ÚLTIMOS CURSOS</h1>
-                <p class="text-gray-700 text-center text-md mb-6">Trabajamos duro para seguir subiendo cursos!</p>
+                <h1 class="text-gray-500 text-center text-3xl">ÚLTIMOS CURSOS</h1>
+                <p class="text-gray-500 text-center text-md mb-6">Trabajamos duro para seguir subiendo cursos!</p>
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-x-6 gap-y-8">
                     @foreach ($courses as $course)
                         <x-course-card :course="$course" />
@@ -83,8 +83,7 @@
 
                 </div>
 </section>
-                 
-    </section>
+
     <div class="bg-black">
         <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto">
           <div class="p-5 sm:w-2/12 border-r">
@@ -201,7 +200,7 @@
                  </svg>
               </a>
            </div>
-           <div class="my-5">© Copyright 2020. All Rights Reserved.</div>
+           <div class="my-5">© Copyright 2022. Todos los derechos reservados.</div>
         </div>
      </div>
      

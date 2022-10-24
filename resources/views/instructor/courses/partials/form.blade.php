@@ -55,9 +55,10 @@
         <figure>
             @isset($course->image)
             <img id="file" class="h-36 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt="">
+           
        @else
-            <img id="file" class="h-36 w-full object-cover" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
-       @endisset
+                <img id="picture" class="w-full h-64 object-cover object-center" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+           @endisset
         </figure>
 
         <div>

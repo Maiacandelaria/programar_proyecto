@@ -17,4 +17,4 @@ Route::get('courses/{course}/students',  CoursesStudents::class)->middleware('ca
 
 Route::post('courses/{course}/status',  [CourseController::class, 'status'])->name('courses.status');     
 
-Route::post('courses/{course}/observation',  [CourseController::class, 'observation'])->name('courses.observation');    
+Route::get('courses/{course}/observation',  [CourseController::class, 'observation'])->name('courses.observation');    

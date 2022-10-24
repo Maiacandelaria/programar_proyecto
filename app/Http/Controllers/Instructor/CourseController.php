@@ -171,6 +171,6 @@ class CourseController extends Controller
     }
 
     public function observation(Course $course){
-        return view('instructor.courses.observation');
+        return view('instructor.courses.observation', compact('course'));
     }
 }

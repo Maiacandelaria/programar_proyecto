@@ -1,6 +1,6 @@
 <div>
     @foreach ($section->lessons as $item)
-        <article class="card mt-4" x-data="{open: false}">
+        <article class="card mt-4" x-data="{open: false}"" x-cloack">
             <div class="card-body">
              
                 @if ($lesson->id == $item->id)
@@ -62,43 +62,41 @@
         </article>
     @endforeach
 
-    <div class="mt-4" x-data="{open: false}">
+    <div x-data="{open: false}">
         <a x-show="!open" x-on:click="open = true" class="flex items-center cursor-pointer">
              <i class="far fa-plus-square text-2xl text-red-500 mr-2"></i>
-                 Agregar nueva Lección
+                 Agregar nueva lección
+        </a>
         <article class="card" x-show="open">
-            <div class="card-body">
-                 <h1 class="text-xl font-bold mb-4 cursor-pointer">Agregar nueva Lección</h1>
+            <div class="card-body bg-gray-100">
+                 <h1 class="text-xl font-bold mb-4 cursor-pointer">Agregar nueva lección</h1>
                
                  <div class="mb-4"> 
                     <div class="flex items-center">
                         <label class="w-32">Nombre:</label>
-                        <input wire:model="name" class="form-input w-full">
+                        <input wire:model="lesson.name" class="form-input w-full">
                     </div>
-                    @error('name')
+                    @error('lesson.name')
                         <span class="text-xs text-red-500">{{$message}}</span> 
                     @enderror
 
                         <div class="flex items-center mt-4">
                             <label class="w-32">Plataforma:</label>
-                            <select wire:model="platform_id" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <select wire:model="lesson.platform_id" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                 @foreach ($platforms as $platform)
                                     <option value="{{$platform->id}}">{{$platform->name}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        @error('platform_id')
-                           <span class="text-xs text-red-500">{{$message}}</span> 
-                        @enderror
-
 
                         <div class="flex items-center mt-4">
                             <label class="w-32">URL:</label>
-                            <input wire:model="url" class="form-input w-full">
+                            <input wire:model="lesson.url" class="form-input w-full">
                         </div>
-                        @error('url')
+                        @error('lesson.url')
                             <span class="text-xs text-red-500">{{$message}}</span> 
                         @enderror
+
                  </div>
                
                  <div class="flex justify-end ">
@@ -108,4 +106,5 @@
             </div>
         </article>
     </div>
+ 
 </div>

@@ -4,19 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <title>{{ config('app.name', 'Programar Proyecto') }}</title>
-
-        <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
 
         @livewireStyles
 
-        <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
@@ -28,7 +22,7 @@
                 <aside>
                     <h1 class="font-bold text-lg mb-4 ">Edición del curso</h1>
         
-                    <ul class="text-sm text-gray-600 mb-4">
+                    <ul class="text-sm text-gray-600 mb-4 cursor-pointer">
                         <li class="leading-7 mb-1 border-l-4 hover:bg-purple-600 text-white @routeIs('instructor.courses.edit', $course) border-indigo-400 @else border-transparent  @endif pl-2">
                             <a href="{{route('instructor.courses.edit', $course)}}">Información del curso</a>
                         </li>
@@ -43,7 +37,7 @@
                         </li>
                         @if ($course->observation)
                         <li class="leading-7 mb-1 border-l-4 hover:bg-purple-600 text-white @routeIs('instructor.courses.students', $course) border-indigo-400 @else border-transparent  @endif pl-2">
-                            <a href="{{route('instructor.courses.students', $course)}}">Observaciones del cursp</a>
+                            <a href="{{route('instructor.courses.observation', $course)}}">Observaciones del curso</a>
                         </li>
                         @endif
                     </ul>

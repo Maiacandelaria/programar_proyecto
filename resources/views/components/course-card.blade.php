@@ -1,15 +1,15 @@
 @props(['course'])
 
 
-<article class="card flex flex-col text-white">
+<article class="card flex flex-col text-white rounded overflow-hidden">
 
-    <img class="card flex flex-col">
-        @isset($course->image)
-             <img id="picture" class="h-36 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt="">
-        @else
-             <img id="picture" class="h-36 w-full object-cover" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
-        @endisset
-</img>
+    <figure>
+            @isset($course->image)
+            <img id="picture" class="h-36 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt=""> 
+       @else
+                <img id="picture" class="w-full h-36 object-cover object-center" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+           @endisset
+        </figure>
 
         
     <div class="card-body flex-1 flex flex-col bg-black text-white">

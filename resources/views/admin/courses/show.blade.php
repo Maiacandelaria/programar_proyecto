@@ -42,7 +42,7 @@
             {{-- METAS --}}
             <section class="card mb-12 bg-black">
                 <div class="card-body bg-black">
-                    <h1 class="font-bold text-2xl mb-2 bg-black">Lo que aprenderás</h1>
+                    <h1 class="font-bold text-2xl mb-2 bg-black text-white">Lo que aprenderás</h1>
 
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 bg-black">
 
@@ -58,7 +58,7 @@
             {{-- TEMARIO --}}
 
             <section class="mb-12 bg-black" >
-               <h1 class="font-fold text-3xl mb-2 bg-black">Temario</h1>
+               <h1 class="font-fold text-3xl text-white mb-2 bg-black">Temario</h1>
                @forelse ($course->sections as $section)
                    <article class="mb-4 shadow"
                            @if ($loop->first)
@@ -80,7 +80,7 @@
                    </article>
                 @empty
                    <article class="card">
-                        <div class="card-body">
+                        <div class="card-body bg-black text-white">
                             Este curso no tiene ninguna sección asignada
                         </div>
                    </article>
@@ -90,7 +90,7 @@
 
             {{-- REQUISITOS --}}
             <section class="mb-8">
-                <h1 class="font-bold text-3xl">Requisitos</h1>
+                <h1 class="font-bold text-3xl text-white">Requisitos</h1>
                 <ul class="list-disc list-inside text-white">
                     @forelse ($course->requirements as $requirement)
                         <li class="text-white text-base">{{$requirement->name}}</li>
@@ -101,7 +101,7 @@
             </section>
 
             <section>
-                <h1 class="font-bold text-3xl ">Descripción</h1>
+                <h1 class="font-bold text-3xl text-white ">Descripción</h1>
                 <div class="text-gray-700 text-base">
                     {!!$course->description!!}
                 </div>
@@ -114,8 +114,8 @@
                         <div class="flex items-center">
                             <img class="h-12 w-12 object-cover shadow-lg rounded-full"  src="{{$course->teacher->profile_photo_url}}" alt="{{$course->teacher->name}}">
                             <div class="ml-4">
-                            <h1 class="font-fold text-gray-500 text-lg">Prof: {{$course->teacher->name}}</h1>
-                            <a class="text-blue-500 text-sm font-bold" href="">{{'@' . Str::slug($course->teacher->name, '' )}}</a>
+                            <h1 class="font-fold text-gray-500 text-lg">Prof:  {{$course->teacher->name}}</h1>
+                            <a class="text-blue-500 text-sm font-bold" href="">{{'@' . Str::slug($course->teacher->name, ''  )}}</a>
                             </div>
                         </div>
                         <form action="{{route('admin.courses.approved', $course)}}" method="POST">

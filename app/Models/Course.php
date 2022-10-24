@@ -48,7 +48,7 @@ class Course extends Model
     //Relacion observation hasMany =  UNO a UNO
 
     public function observation(){
-        return $this->hasMany('App\Models\Observation');
+        return $this->hasOne('App\Models\Observation');
     }
 
 
@@ -86,7 +86,7 @@ class Course extends Model
     
 
     public function price(){
-        return $this->belongsTo('App\Models\price'); //level
+        return $this->belongsTo('App\Models\price'); 
     }
 
     
