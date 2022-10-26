@@ -8,7 +8,7 @@
     <style>h1{color:red}</style>
 </head>
 <body>
-    <h1>ESTE ES UN CORREO DE PRUEBA</h1>
+    <h1>Curso rechazado</h1>
     <p>El curso <strong>{{$course->title}}</strong> ha sido rechazado</p>
     <h2>Motivo del rechazo</h2>
     {!!$course->observation->body!!}

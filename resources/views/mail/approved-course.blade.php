@@ -8,7 +8,7 @@
     <style>h1{color:red}</style>
 </head>
 <body>
-    <h1>ESTE ES UN CORREO DE PRUEBA</h1>
+    <h1>Curso aprobado</h1>
     <p>El curso <strong>{{$course->title}}</strong> se ha aprobado con éxito</p>
 </body>
 </html>

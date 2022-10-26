@@ -9,9 +9,7 @@ class HomeController extends Controller
 {
     public function __invoke()// __Invoke se utiliza cuando se solo va a utilizar una sola ruta.
     {
-        $courses = Course::all();
-        
-        
+        $courses = Course::where('status', 3)->paginate();
         return view('welcome', compact('courses')); 
     }
 }
