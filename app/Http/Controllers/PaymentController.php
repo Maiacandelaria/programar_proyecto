@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use PayPal\Api\PaymentExecution;
 
 class PaymentController extends Controller
 {
@@ -30,8 +31,8 @@ $transaction = new \PayPal\Api\Transaction();
 $transaction->setAmount($amount);
 
 $redirectUrls = new \PayPal\Api\RedirectUrls();
-$redirectUrls->setReturnUrl("https://example.com/your_redirect_url.html")
-    ->setCancelUrl("https://example.com/your_cancel_url.html");
+$redirectUrls->setReturnUrl(route('payment.checkout', $course))
+    ->setCancelUrl(route('payment.checkout', $course));
 
 $payment = new \PayPal\Api\Payment();
 $payment->setIntent('sale')
@@ -52,6 +53,29 @@ catch (\PayPal\Exception\PayPalConnectionException $ex) {
     echo $ex->getData();
 }
     }
+
+    // public function approved(Request $request, Course $course) {
+
+    //     $apiContext = new \PayPal\Rest\ApiContext(
+    //         new \PayPal\Auth\OAuthTokenCredential(
+    //             config('services.paypal.client_id'),     // ClientID
+    //             config('services.paypal.client_secret')      // ClientSecret
+    //         )
+    //         );
+
+    //     $paymentId = $_GET['paymentId'];
+    //     $payment = \PayPal\Api\Payment::get($paymentId, $apiContext);
+
+    //     $execution = new \PayPal\Api\PaymentExecution();
+    //     $execution->setPayerId($_GET['PayerID']);
+
+    //     $payment->execute($execution,$apiContext);
+
+    //     $course->students()->attach(auth()->user()->id);
+    //     return redirect()->route('courses.status', $course);
+
+        
+    // }
 }
 
 

@@ -3,30 +3,33 @@
 
     @can('enrolled', $course)
         <article>
-            <textarea wire:model="comment" class="form-input w-full text-white" rows="3" placeholder="Ingrese una reseña del curso"></textarea>
+            @can('valued', $course)
+           
+            <textarea wire:model="comment" class="form-input w-full text-black" rows="3" placeholder="Ingrese una reseña del curso"></textarea>
 
                 <div class="flex items-center">
                     <button class="btn btn-primary mr-2" wire:click="store">Guardar</button>
 
                         <ul class="flex ">
-                            <li class="mr-1 cursor-pointer" wire:click="set('rating', 1)">
+                            <li class="mr-1 cursor-pointer" wire:click="$set('rating', 1)">
                                 <i class="fas fa-star text-{{$rating >= 1 ? 'yellow' : 'gray'}}-400"></i>
                             </li>
-                            <li class="mr-1 cursor-pointer" wire:click="set('rating', 2)">
+                            <li class="mr-1 cursor-pointer" wire:click="$set('rating', 2)">
                                 <i class="fas fa-star text-{{$rating >= 2 ? 'yellow' : 'gray'}}-400"></i>
                             </li>
-                            <li class="mr-1 cursor-pointer" wire:click="set('rating', 3)">
+                            <li class="mr-1 cursor-pointer" wire:click="$set('rating', 3)">
                                 <i class="fas fa-star text-{{$rating >= 3 ? 'yellow' : 'gray'}}-400"></i>
                             </li>
-                            <li class="mr-1 cursor-pointer" wire:click="set('rating', 4)">
+                            <li class="mr-1 cursor-pointer" wire:click="$set('rating', 4)">
                                 <i class="fas fa-star text-{{$rating >= 4 ? 'yellow' : 'gray'}}-400"></i>
                             </li>
-                            <li class="mr-1 cursor-pointer" wire:click="set('rating', 5)">
+                            <li class="mr-1 cursor-pointer" wire:click="$set('rating', 5)">
                                 <i class="fas fa-star text-{{$rating == 5 ? 'yellow' : 'gray'}}-400"></i>
                             </li>
                         </ul>
 
                 </div>
+                @endcan
         </article>
     @endcan
 

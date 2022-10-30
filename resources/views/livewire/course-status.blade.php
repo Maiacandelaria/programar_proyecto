@@ -5,11 +5,11 @@
                 {!!$current->iframe!!}
             </div>
 
-            <h1 class="text-3xl text-gray-600 font-bold mt-4">
+            <h1 class="text-3xl text-gray-400 font-bold mt-4">
                 {{$current->name}}
             </h1>
             @if ($current->description)
-                <div class="text-gray-600">
+                <div class="text-gray-400">
                     {{$current->description->name}}
                 </div>
             @endif
@@ -21,11 +21,11 @@
                     <i class="fas fa-toggle-off text-2xl text-gray-600 "></i>
                 @endif
 
-                <p class="text-sm ml-2">Marcar esta unidad como terminada</p>
+                <p class="text-sm ml-2 text-white">Marcar esta unidad como terminada</p>
             </div>
 
             <div class="card mt-2">
-                <div class="card-body flex text-gray-500 font-bold">
+                <div class="card-body flex text-gray-400 font-bold bg-black">
                     
                     @if($this->previous)
                        <a wire:click="changeLesson({{$this->previous}})" class="cursor-pointer"> Tema anterior</a>
@@ -41,28 +41,28 @@
         </div>
         
         <div class="card">
-            <div class="card-body">
-                <h1 class="text-2xl leading-8 text-center mb-4">{{$course->title}}</h1>
+            <div class="card-body bg-black">
+                <h1 class="text-2xl leading-8 text-center mb-4 text-gray-400">{{$course->title}}</h1>
                 <div class="flex items-center">
                     <figure>
-                        <img class="w-12 h-12 object-cover rounded-full mr-4" src="{{$course->teacher->profile_photo_url}}" alt="">
+                        <img class="w-12 h-12 object-cover rounded-full mr-4 text-gray-400" src="{{$course->teacher->profile_photo_url}}" alt="">
                     </figure>
                     <div>
-                        <p>{{$course->teacher->name}}</p>
+                        <p class="text-gray-400">{{$course->teacher->name}}</p>
                         <a class="text-blue-500 text-sm" href="">{{'@' . Str::slug($course->teacher->name, '')}}</a>
                     </div>
                  </div>
 
-                 <p class="text-gray-600 text-sm mt-2 ">{{$this->advance . '% '}}Completado</p>
+                 <p class="text-gray-400 text-sm mt-2 ">{{$this->advance . '% '}}Completado</p>
                  <div class="relative pt-1">
                     <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-yellow-100">
                       <div style="width:{{$this->advance . '% '}}" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500 transition-all duration-200"></div>
                     </div>
                   </div>
 
-                 <ul>
+                 <ul class="bg-black">
                      @foreach ($course->sections as $section)
-                         <li class="text-gray-600 mb-4">
+                         <li class="text-gray-400 mb-4 bg-black">
                              <a class="font-bold text-base inline-block mb-2">{{$section->name}}</a>
                              <ul>
                                  @foreach ($section->lessons as $lesson)

@@ -4,7 +4,7 @@ return [
     'full_name'                   => 'Nom complet',
     'email'                       => 'Email',
     'password'                    => 'Contrasenya',
-    'retype_password'             => 'Confirmar la contrasenya',
+    'retype_password'             => 'ar la contrasenya',
     'remember_me'                 => 'Recordar-me',
     'register'                    => 'Registrar-se',
     'register_a_new_membership'   => 'Crear un nou compte',

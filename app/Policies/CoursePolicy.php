@@ -47,4 +47,15 @@ class CoursePolicy
            return false;
        }
     }
+
+    /*
+    public function valued(user $user, course $course){
+        if (Review::where('user_id', $user->id)->where('course_id', $course->id)->count()) {
+            return false;
+        }else{
+            return true;
+        }
+    }*/
+
+    //estas lineas me generan un error,son para que un usuario solo pueda comentar una sola vez
 }

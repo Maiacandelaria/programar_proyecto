@@ -28,8 +28,7 @@ class CourseFactory extends Factory
      */
     public function definition()
     {
-        //Hola mundo
-        //hola-mundo
+    
 
         $title = $this->faker->sentence();
 
@@ -37,7 +36,7 @@ class CourseFactory extends Factory
             'title' => $title,
             'subtitle' => $this->faker->sentence(),
             'description' => $this->faker->paragraph(),
-            'status' => $this->faker->randomElement([Course::PUBLICADO]),
+            'status' => $this->faker->randomElement([Course::BORRADOR, Course::REVISION, Course::PUBLICADO]),
             'slug' => Str::slug($title),
             'user_id' => $this->faker->randomElement([1,2,3,4,5]),
             'level_id' => Level::all()->random()->id,

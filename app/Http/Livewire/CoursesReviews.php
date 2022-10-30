@@ -25,6 +25,7 @@ class CoursesReviews extends Component
         $course->reviews()->create([
             'comment' => $this->comment,
             'rating' => $this->rating,
+            'user_id' => auth()->user()->id
         ]);
     }
 }

@@ -87,27 +87,25 @@
                         </div>
                     </div>
 
-                        @can('enrolled', $course)
-                            <a class="btn btn-danger btn-block mt-4" href="{{route('courses.status', $course)}}">Continuar con el curso</a>
-                        @else
+                    @can('enrolled', $course)
 
-                           @if($course->price->value ==0)
+                    <a class="btn btn-danger btn-block mt-4" href="{{route('courses.status', $course)}}">Continuar con el curso</a>
 
-                           <p class="text-2x1 font-bold text-green-500 mt-3 mb-2">      Gratis</p>
-
-                                 <form action="{{route('courses.enrolled', $course)}} method="POST">
+                @else
+                    @if ($course->price->value  == 0)
+                            <p class="text-2x1 font-bold text-green-500 mt-3 mb-2">Gratis</p>
+                            <form action="{{route('courses.enrolled', $course)}}" method="POST">
                                 @csrf
                                 <button class="btn btn-danger btn-block mt-4" type="submit">
                                     Empezar este curso
                                 </button>
                             </form>
-                           @else
+                    @else 
+                            <p class="text-2x1 font-bold text-gray-700 mt-3 mb-2">${{$course->price->value }}</p>
+                            <a href="{{route('payment.checkout', $course)}}" class="btn btn-danger btn-block mt-4">Comprar este curso</a>
+                    @endif
+                @endcan
 
-                                <p class="text-2x1 font-bold text-gray-700 mt-3 mb-2">$ {{$course->price->value}} pesos argentinos</p>
-                                <a href="{{route('payment.checkout' , $course)}}" class="btn btn-danger btn-block">Comprar este curso </a>
-                                @endif
-
-                        @endcan
                 </div>
         </section>
         <aside class="hidden lg:block">
@@ -133,3 +131,4 @@
     </div>
 
 </x-app-layout>
+
