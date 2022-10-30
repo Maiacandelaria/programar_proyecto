@@ -48,7 +48,7 @@ class Course extends Model
     //Relacion observation hasMany =  UNO a UNO
 
     public function observation(){
-        return $this->hasMany('App\Models\Observation');
+        return $this->hasOne('App\Models\Observation');
     }
 
 
