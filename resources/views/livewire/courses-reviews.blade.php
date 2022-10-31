@@ -35,7 +35,7 @@
 
     <div class=" bg-black">
         <div class="card-body bg-black">
-            <p class="text-white text-xl">{{$course->reviews->count()}} Valoraciones</p>
+            <p class="text-white text-xl m-4">{{$course->reviews->count()}} Valoraciones</p>
             @foreach ($course->reviews as $review)
                 <article class="flex mb-4 text-white">
                     <figure class="mr-4">

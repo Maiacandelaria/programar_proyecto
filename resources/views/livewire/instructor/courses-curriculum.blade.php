@@ -44,7 +44,7 @@
            </a>
            <article class="card" x-show="open">
                <div class="card-body bg-gray-100">
-                    <h1 class="text-xl font-bold mb-4 cursor-pointer">Agregar nueva sección</h1>
+                    <h1 class="text-xl font-bold mb-4 cursor-pointer">Agregar nueva lección</h1>
                   
                     <div class="mb-4"> 
                         <input wire:model="name"  class="form-input w-full" placeholder="Escriba el nombre de la lección ...">

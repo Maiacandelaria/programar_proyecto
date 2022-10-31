@@ -114,13 +114,13 @@
                     <img class="h-32 w-40 object-cover" src="{{$similar->image->url}}" alt="">
                     <div class="">
                         <h1 class="ml-3">
-                            <a class="font-bold text-gray-500 mb-3" href="{{route('courses.show', $similar)}}">{{Str::limit($similar->title, 40)}}</a>
+                            <a class="font-bold text-gray-500 m-4" href="{{route('courses.show', $similar)}}">{{Str::limit($similar->title, 40)}}</a>
                         </h1>
-                        <div class="flex items-center mb-2">
+                        <div class="flex items-center m-2">
                             <img class="w-8 h-8 rounded-full object-cover shadow-lg ml-2" src="{{$similar->teacher->profile_photo_url}}" alt="">
                             <p class="text-gray-500 text-sm ml-2">{{$similar->teacher->name}}</p>
                         </div>
-                            <p class="ml-2 text-sm"><i class="fas fa-star mr-2 text-yellow-300"></i>{{$similar->rating}}</p>
+                            <p class="ml-2 text-sm text-white"><i class="fas fa-star mr-2 text-yellow-300"></i>{{$similar->rating}}</p>
                     </div>
 
                 </article>

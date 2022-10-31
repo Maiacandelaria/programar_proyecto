@@ -7,12 +7,17 @@
          @include('instructor.courses.partials.form')
 
         <div class="flex justify-end">
-            {!! Form::submit('Actualizar Información', ['class'=> 'btn btn-primary']) !!}
-
+            {!! Form::submit('Actualizar Información', ['class'=> 'btn btn-primary cursor-pointer']) !!}
 
         </div>
         {!! Form::close() !!}
 
+
+
+
+
+
+        
     <x-slot name="js">
         <script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/classic/ckeditor.js"></script>
         <script src="{{asset('js/instructor/courses/form.js')}}"></script>

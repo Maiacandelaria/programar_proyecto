@@ -54,7 +54,7 @@
 
         <figure>
             @isset($course->image)
-            <img id="file" class="h-36 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt="">
+            <img id="file" class="h-36 w-full object-cover" src="{{($course->image->url)}}" alt="">
            
        @else
                 <img id="picture" class="w-full h-64 object-cover object-center" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
@@ -64,8 +64,6 @@
         <div>
            <p class="mb-2" >Agrega una imagen para tu curso</p>
             {!! Form::file('file', ['class'=> 'form-input w-full' . ($errors->has('file') ? ' border-red-600' : '' ) , 'id' =>'file', 'accept' => 'image/*']) !!}
-
-            
 
             @error('file')
                  <strong class="text-sm text-red-600">{{$message}}</strong>

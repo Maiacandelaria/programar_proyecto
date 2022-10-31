@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
             'password' => bcrypt('$pastelitopastelito$')
         ]);
         $user->assignRole('Admin');
+        
         User::factory(30)->create();
     }
 }

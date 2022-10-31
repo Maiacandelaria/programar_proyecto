@@ -64,12 +64,12 @@
           <div class="p-5 sm:w-2/12 border-r">
               <div class="text-sm uppercase text-indigo-600 font-bold">Menu</div>
             <ul>
-              <li class="my-2">
-                <a class="text-white hover:text-indigo-200" href="/#">Home</a>
-              </li>
-              <li class="my-2">
-                <a class="text-white hover:text-indigo-600" href="/#">Cursos</a>
-              </li>
+               <li class="my-2">
+                  <a class="text-white hover:text-indigo-600" href="{{ route('home') }}">Home</a>
+                </li>
+                <li class="my-2">
+                  <a class="text-white hover:text-indigo-600" href="{{ route('courses.index') }}">Cursos</a>
+                </li>
             </ul>
            </div>
            <div class="p-5 sm:w-7/12 border-r text-center">

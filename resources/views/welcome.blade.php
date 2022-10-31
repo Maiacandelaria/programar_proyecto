@@ -8,7 +8,6 @@
                 <p class="text-white text-lg mt-2"> <html>Transforma tu vida mediante la educación<br>
                     Estudiantes de todo el mundo se embarcan en nuevas carreras, avanzan en sus campos y enriquecen sus vidas en nuestra plataforma
                     </html></p>
-          
                 @livewire('search')
           
             </div>
@@ -26,27 +25,27 @@
                 <header class="mt-2">
                     <h1 class="text-center text-xl text-gray-500">Cursos y proyectos</h1>
                 </header>
-                    <p class="text-sm text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="text-sm text-gray-500 ">Te brindamos habilidades de programación aplicables de inmediato al mercado en un sector de alto crecimiento.</p>
             </article>
 
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/laravel.png')}}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/gratis.png')}}" alt="">
                 </figure>
                 <header class="mt-2">
-                    <h1 class="text-center text-xl text-gray-500">Manual de Laravel</h1>
+                    <h1 class="text-center text-xl text-gray-500">Cursos gratuitos!!</h1>
                 </header>
-                    <p class="text-sm text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="text-sm text-gray-500 ">Con $0 costo y nivel académico de excelencia.</p>
             </article>
 
             <article>
                 <figure>
-                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/laptop-3087585_1280.jpg')}}" alt="">
+                    <img class="rounded-xl h-36 w-full object-cover" src="{{asset('img/home/webdesign.png')}}" alt="">
                 </figure>
                 <header class="mt-2">
-                    <h1 class="text-center text-xl text-gray-500">Blog</h1>
+                    <h1 class="text-center text-xl text-gray-500">Diseño Web</h1>
                 </header>
-                    <p class="text-sm text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="text-sm text-gray-500 ">El diseño web es una actividad que consiste en la planificación, diseño, implementación y mantenimiento de sitios web.</p>
             </article>
 
             <article>
@@ -56,7 +55,7 @@
                 <header class="mt-2">
                     <h1 class="text-center text-xl text-gray-500">Desarrollo web</h1>
                 </header>
-                    <p class="text-sm text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="text-sm text-gray-500 "> Incorporá nuevas habilidades para digitalizar tu perfil profesional que te permitirán interactuar con las interfaces de usuario.</p>
             </article>
         </div>
     </section>
@@ -90,10 +89,10 @@
               <div class="text-sm uppercase text-indigo-600 font-bold">Menu</div>
             <ul>
               <li class="my-2">
-                <a class="text-white hover:text-indigo-600" href="#">Home</a>
+                <a class="text-white hover:text-indigo-600" href="{{ route('home') }}">Home</a>
               </li>
               <li class="my-2">
-                <a class="text-white hover:text-indigo-600" href="#">Cursos</a>
+                <a class="text-white hover:text-indigo-600" href="{{ route('courses.index') }}">Cursos</a>
               </li>
             </ul>
            </div>

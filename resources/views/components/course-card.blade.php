@@ -5,7 +5,7 @@
 
     <figure>
             @isset($course->image)
-            <img id="picture" class="h-36 w-full object-cover" src="{{Storage::url($course->image->url)}}" alt=""> 
+            <img id="picture" class="h-36 w-full object-cover" src="{{($course->image->url)}}" alt=""> 
        @else
                 <img id="picture" class="w-full h-36 object-cover object-center" src="https://images.pexels.com/photos/5905885/pexels-photo-5905885.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
            @endisset
@@ -13,7 +13,7 @@
 
         
     <div class="card-body flex-1 flex flex-col bg-black text-white">
-            <h1 class="card-title text-white ">{{Str::limit($course->title, 40)}} </h1>
+            <h1 class=" text-white text-center text-xl mb-2 leading-6">{{Str::limit($course->title, 40)}} </h1>
             <p class="text-white text-center text-sm mb-2 mt-auto">Prof:{{$course->teacher->name}}</p>
             
 
